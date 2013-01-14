@@ -8,6 +8,7 @@ set autoindent
 set ruler
 set shiftwidth=4
 set tabstop=4
+set expandtab
 set history=200
 set backup
 set guioptions-=T
@@ -81,7 +82,35 @@ let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 let Tlist_Use_Right_Window = 1
 noremap <silent> \4 :TlistToggle<CR>
 
+" Tagbar
+noremap \5 :TagbarToggle<CR>
+let g:tagbar_right = 1
+let g:tagbar_width = 35
 
+" MiniBufExplorer
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+
+" Command-T
+:set wildignore+=*.o,*.obj,.git,.DS_Store,*~
+let g:CommandTMaxFiles=20000
+let g:CommandTMaxDepth=20
+
+" pythoncomplete
+filetype plugin on
+set ofu=syntaxcomplete#Complete
+autocmd FileType python　set
+omnifunc=pythoncomplete#Complete
+autocmd FileType python runtime! autoload/pythoncomplete.vim
+
+" python-mode
+let g:pymode_rope_guess_project = 0
+let g:pymode_run_key = '<leader>p'
+
+" Pathogen load
+filetype off
 call pathogen#infect()
 call pathogen#helptags()
 syntax on
