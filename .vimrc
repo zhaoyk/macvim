@@ -102,7 +102,6 @@ let g:CommandTMaxDepth=20
 filetype plugin on
 set ofu=syntaxcomplete#Complete
 autocmd FileType python　set
-omnifunc=pythoncomplete#Complete
 autocmd FileType python runtime! autoload/pythoncomplete.vim
 
 " python-mode
