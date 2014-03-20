@@ -101,8 +101,8 @@ let g:CommandTMaxDepth=20
 " pythoncomplete
 filetype plugin on
 set ofu=syntaxcomplete#Complete
-autocmd FileType python　set
-autocmd FileType python runtime! autoload/pythoncomplete.vim
+" autocmd FileType python　set
+" autocmd FileType python runtime! autoload/pythoncomplete.vim
 
 " python-mode
 let g:pymode_rope_guess_project = 0
